@@ -13,6 +13,13 @@
 #include "rapidjson/stringbuffer.h"
 #include "rapidjson/ostreamwrapper.h"
 
+#define _BOOL "BOOL"
+#define _TABLE "TABLE"
+#define _INT "INT"
+#define _STRING "STRING"
+#define _AddResponseValue 1
+#define _AddQuestionValue 2
+
 using namespace rapidjson;
 using namespace std;
 
@@ -35,7 +42,7 @@ private:
         string optionText;
     };
 
-    int QuestionID = 0, QuestionID2 = 0, OptionID = 0, numParticipants = 0, maxLevel = 0;
+    int QuestionID_ = 0, QuestionID2_ = 0, OptionID_ = 0, NumParticipants_ = 0, MaxLevel_ = 0;
 
     map<int, AllQuestionsType> AllQuestions;
     map<int, AllQuestionsType2 >AllQuestions2;
@@ -47,19 +54,24 @@ private:
     vector<MultiSelectResponsesType1> MultiSelectResponses1;
     map<int, vector<pair<int,int>> > MultiSelectResponses2;
 
-    Document d;
+    Document JsonObject_;
 
 public:
-    void addQuestion(string groupName, string text);
-    void addQuestion2(vector<string> lv, bool type);
-    void addMultiSelectResponse(int curQuestion, int participantID, string optionText, int optionID);
+    //Add to storages
+    void AddQuestion(string groupName, string text);
+    void AddQuestion2(vector<string> lv, bool type);
+    void AddMultiSelectResponse(int curQuestion, int participantID, string optionText, int optionID);
     void TransferToMultiSelect(int curQuestion, bool &isMulti);
-    void addMapBOOL(int curQuestion, string val, Value& arr);
-    void addMapINT(int curQuestion, string val, Value& arr);
-    void addMapSTR(int curQuestion, string val, Value& arr);
+    void AddMapBOOL(int curQuestion, string val, Value& arr);
+    void AddMapINT(int curQuestion, string val, Value& arr);
+    void AddMapSTR(int curQuestion, string val, Value& arr);
+
+    //Solution
     int dfs(string str, Value& u, int curQuestion, vector<string> lv);
     void GetJson(string input);
     void Solution();
+
+    //Output to files
     string modifyString (string x);
     void OutputAllQuestionsTable(string output);
     void OutputAllQuestionsTable2(string output);

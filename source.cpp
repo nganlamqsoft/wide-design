@@ -16,6 +16,13 @@
 #include "rapidjson/ostreamwrapper.h"
 #include "WideDesign.h"
 
+#define _BOOL "BOOL"
+#define _TABLE "TABLE"
+#define _INT "INT"
+#define _STRING "STRING"
+#define _AddResponseValue 1
+#define _AddQuestionValue 2
+
 #pragma warning (disable:4996)
 
 using namespace rapidjson;
@@ -23,7 +30,7 @@ using namespace std;
 
 int main() {
 	WideDesign SQLTables;
-	SQLTables.GetJson("covid-segmentation-data.json");
+	SQLTables.GetJson("inputFiles\\dwise.json");
 	ofstream out("outputFiles\\AllMultiSelectResponsesTable2.sql"); out.close();
 	SQLTables.Solution();
 	SQLTables.OutputAllQuestionsTable("outputFiles\\AllQuestionsTable.sql");
