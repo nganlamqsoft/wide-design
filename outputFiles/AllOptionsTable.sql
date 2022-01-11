@@ -1,4 +1,4 @@
-DROP TABLE IF EXIST all_options;
+DROP TABLE IF EXISTS all_options;
 CREATE TABLE all_options(
 	QuestionID INT,
 	OptionID INT,

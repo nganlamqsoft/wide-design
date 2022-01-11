@@ -23,7 +23,7 @@
 #define _AddResponseValue 1
 #define _AddQuestionValue 2
 #define _AddColumn "ADD COLUMN "
-#define _DropTable "DROP TABLE IF EXIST "
+#define _DropTable "DROP TABLE IF EXISTS "
 #define _CreateTable "CREATE TABLE "
 #define _InsertInto "INSERT INTO "
 #define _SelectAllFrom "SELECT * FROM "

@@ -1,4 +1,4 @@
-DROP TABLE IF EXIST all_questions;
+DROP TABLE IF EXISTS all_questions;
 CREATE TABLE all_questions(
 	QuestionID INT,
 	QuestionText VARCHAR(255),
