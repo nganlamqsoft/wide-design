@@ -1,10 +1,10 @@
-DROP TABLE IF EXISTS all_questions2;
+DROP TABLE IF EXIST all_questions2; 
 CREATE TABLE all_questions2(
 	QuestionID INT
 );
 
 ALTER TABLE all_questions2
-ADD COLUMN Level1 VARCHAR(255),
+ADD COLUMN Level1 VARCHAR(255), 
 ADD COLUMN Level2 VARCHAR(255);
 
 INSERT INTO all_questions2 (Level1,QuestionID)

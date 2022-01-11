@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS single_select_responses;
+DROP TABLE IF EXIST single_select_responses;
 CREATE TABLE single_select_responses(
 	SurveyParticipantID INT
 );

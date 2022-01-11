@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS multi_select_responses;
+DROP TABLE IF EXIST multi_select_responses;
 CREATE TABLE multi_select_responses(
 	SurveyParticipantID INT,
 	QuestionID INT,
