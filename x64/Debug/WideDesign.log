@@ -80,6 +80,6 @@ F:\WorkProgramming\C Plus Plus Convert SQL\VisualStudio\WideDesign\rapidjson\doc
               Encoding=rapidjson::UTF8<char>,
               Allocator=rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>
           ]
-F:\WorkProgramming\C Plus Plus Convert SQL\VisualStudio\WideDesign\outputSQLTables.cpp(130,50): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-F:\WorkProgramming\C Plus Plus Convert SQL\VisualStudio\WideDesign\outputSQLTables.cpp(202,45): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+F:\WorkProgramming\C Plus Plus Convert SQL\VisualStudio\WideDesign\outputSQLTables.cpp(135,50): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+F:\WorkProgramming\C Plus Plus Convert SQL\VisualStudio\WideDesign\outputSQLTables.cpp(209,45): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   WideDesign.vcxproj -> F:\WorkProgramming\C Plus Plus Convert SQL\VisualStudio\WideDesign\x64\Debug\WideDesign.exe

@@ -67,12 +67,12 @@ public:
     void AddMapSTR(int curQuestion, string val, Value& arr);
 
     //Solution
-    int dfs(string str, Value& u, int curQuestion, vector<string> lv);
+    int Dfs(string str, Value& u, int curQuestion, vector<string> lv);
     void GetJson(string input);
     void Solution();
 
     //Output to files
-    string modifyString (string x);
+    string ModifyString (string x);
     void OutputAllQuestionsTable(string output);
     void OutputAllQuestionsTable2(string output);
     void OutputAllOptionsTable(string output);

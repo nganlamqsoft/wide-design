@@ -26,7 +26,7 @@
 using namespace rapidjson;
 using namespace std;
 
-int WideDesign::dfs(string str, Value& u, int curQuestion, vector<string> lv)
+int WideDesign::Dfs(string str, Value& u, int curQuestion, vector<string> lv)
 {
 	int cnt = 1;
 	bool isClosed = 1;
@@ -44,11 +44,11 @@ int WideDesign::dfs(string str, Value& u, int curQuestion, vector<string> lv)
 			if (TypeV != _BOOL) {
 				AddQuestion(str, LabelV);
 				lv.push_back(LabelV);
-				theMax = max(theMax, dfs(LabelV, v, QuestionID_, lv));
+				theMax = max(theMax, Dfs(LabelV, v, QuestionID_, lv));
 				lv.pop_back();
 			}
 			else {
-				theMax = max(theMax, dfs(str, v, curQuestion, lv));
+				theMax = max(theMax, Dfs(str, v, curQuestion, lv));
 			}
 		}
 		cnt += theMax;
@@ -100,6 +100,6 @@ void WideDesign::Solution()
 		AddQuestion("NULL", Label);
 		lv.push_back(Label);
 
-		dfs(Label, root_value[i], QuestionID_, lv);
+		Dfs(Label, root_value[i], QuestionID_, lv);
 	}
 }
